@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Playground - CSS & JavaScript Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with animated title -->
+    <header>
+        <h1 class="animated-title">🎬 Animation Playground</h1>
+        <p class="subtitle">Where CSS meets JavaScript magic!</p>
+    </header>
+
+    <main class="container">
+        <!-- Part 1: CSS-Only Animations Section -->
+        <section class="section" id="css-animations">
+            <h2>Part 1: Pure CSS Animations</h2>
+            <p class="section-description">Hover over the elements below to see CSS transitions and animations in action!</p>
+            
+            <div class="css-demo-grid">
+                <!-- Hover Effects -->
+                <div class="demo-card hover-card">
+                    <h3>Hover Effects</h3>
+                    <button class="fancy-button">Hover Me!</button>
+                </div>
+
+                <!-- Continuous Animation -->
+                <div class="demo-card">
+                    <h3>Continuous Animation</h3>
+                    <div class="floating-box">Floating Box</div>
+                </div>
+
+                <!-- Transform Effects -->
+                <div class="demo-card">
+                    <h3>Transform Effects</h3>
+                    <div class="rotating-square"></div>
+                </div>
+
+                <!-- Fade Animation -->
+                <div class="demo-card">
+                    <h3>Fade Effects</h3>
+                    <div class="pulse-circle"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 2: JavaScript Functions Section -->
+        <section class="section" id="js-functions">
+            <h2>Part 2: JavaScript Functions</h2>
+            <p class="section-description">Interactive examples demonstrating scope, parameters, and return values.</p>
+            
+            <div class="function-demos">
+                <!-- Calculator Demo -->
+                <div class="demo-card">
+                    <h3>Function Parameters & Returns</h3>
+                    <div class="calculator">
+                        <input type="number" id="num1" placeholder="First number" value="5">
+                        <select id="operation">
+                            <option value="add">+</option>
+                            <option value="multiply">×</option>
+                            <option value="power">^</option>
+                        </select>
+                        <input type="number" id="num2" placeholder="Second number" value="3">
+                        <button onclick="performCalculation()">Calculate</button>
+                        <div class="result" id="calc-result">Result will appear here</div>
+                    </div>
+                </div>
+
+                <!-- Scope Demo -->
+                <div class="demo-card">
+                    <h3>Variable Scope Demo</h3>
+                    <button onclick="demonstrateScope()">Show Scope Example</button>
+                    <div class="scope-display" id="scope-display">
+                        <div><strong>Global Variable:</strong> <span id="global-var">Not set</span></div>
+                        <div><strong>Local Variable:</strong> <span id="local-var">Not set</span></div>
+                        <div><strong>Function Result:</strong> <span id="function-result">Not set</span></div>
+                    </div>
+                </div>
+
+                <!-- String Functions -->
+                <div class="demo-card">
+                    <h3>String Processing Functions</h3>
+                    <input type="text" id="text-input" placeholder="Enter some text..." value="Hello World!">
+                    <div class="button-group">
+                        <button onclick="processText('reverse')">Reverse</button>
+                        <button onclick="processText('uppercase')">Uppercase</button>
+                        <button onclick="processText('count')">Count Words</button>
+                        <button onclick="processText('palindrome')">Check Palindrome</button>
+                    </div>
+                    <div class="result" id="text-result">Processed text will appear here</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 3: Combined CSS + JavaScript Section -->
+        <section class="section" id="combined">
+            <h2>Part 3: CSS + JavaScript Integration</h2>
+            <p class="section-description">JavaScript controls CSS animations dynamically!</p>
+            
+            <div class="integration-demos">
+                <!-- Animated Box Controller -->
+                <div class="demo-card">
+                    <h3>Animation Controller</h3>
+                    <div class="animation-box" id="animationBox">🚀</div>
+                    <div class="controls">
+                        <button onclick="triggerAnimation('bounce')">Bounce</button>
+                        <button onclick="triggerAnimation('spin')">Spin</button>
+                        <button onclick="triggerAnimation('shake')">Shake</button>
+                        <button onclick="triggerAnimation('glow')">Glow</button>
+                        <button onclick="resetAnimations()">Reset</button>
+                    </div>
+                </div>
+
+                <!-- Interactive Card Flip -->
+                <div class="demo-card">
+                    <h3>Interactive Card Flip</h3>
+                    <div class="flip-container" onclick="flipCard()">
+                        <div class="flip-card" id="flipCard">
+                            <div class="flip-front">
+                                <h4>Front Side</h4>
+                                <p>Click to flip!</p>
+                            </div>
+                            <div class="flip-back">
+                                <h4>Back Side</h4>
+                                <p>🎉 Flipped!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Modal -->
+                <div class="demo-card">
+                    <h3>Animated Modal</h3>
+                    <button onclick="showModal()">Show Modal</button>
+                    <div class="modal-overlay" id="modalOverlay">
+                        <div class="modal" id="modal">
+                            <div class="modal-header">
+                                <h3>Animated Modal</h3>
+                                <button class="close-btn" onclick="hideModal()">×</button>
+                            </div>
+                            <div class="modal-body">
+                                <p>This modal slides in with CSS animations triggered by JavaScript!</p>
+                                <div class="loading-spinner" id="spinner"></div>
+                                <button onclick="toggleSpinner()">Toggle Loading</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Color Theme Switcher -->
+                <div class="demo-card">
+                    <h3>Dynamic Theme Switcher</h3>
+                    <div class="theme-controls">
+                        <button onclick="setTheme('light')">Light Theme</button>
+                        <button onclick="setTheme('dark')">Dark Theme</button>
+                        <button onclick="setTheme('colorful')">Colorful Theme</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Created for Web Development Assignment - Demonstrating CSS3 & JavaScript Integration</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
